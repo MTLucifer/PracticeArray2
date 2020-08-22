@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5</title>
+</head>
+<body>
+<p>Nhập chuỗi 1 : <input type="text" id="str1"></p>
+<p>Nhập chuỗi 2 : <input type="text" id="str2"></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+    function check(){
+        let str1 =  document.getElementById('str1').value;
+        let strArray1 = str1.split('');
+        let str2 =  document.getElementById('str2').value;
+        let strArray2 = str2.split('');
+        if (strArray2.length === strArray1.length) {
+            for (let i = 0; i < strArray1.length - 1; i++) {
+                if (strArray1[i] === strArray2[i]){
+                        document.getElementById('result').innerText = "Hai chuỗi giống nhau"
+                }
+            }
+        }
+        else
+            document.getElementById('result').innerText = "Hai chuỗi không giống nhau"
+    }
+</script>
+</body>
+</html>

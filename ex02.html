@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<script>
+    let str = [ 'c', 's', 'c', '2', '6', '1' ];
+    let first = 0;
+    let last = str.length-1;
+    document.write(str + "<br/>")
+    while (first<last) {
+        let a = str[first];
+        str[first] = str[last];
+        str[last] = a;
+        first++;
+        last--;
+    }
+    document.write(str);
+</script>
+</body>
+</html>

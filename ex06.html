@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6</title>
+</head>
+<body>
+<p>Nhập chuỗi : <input type="text" id="string"></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+  function check(){
+    let string = document.getElementById('string').value;
+    let strArray = string.split('');
+    for (let i = 0; i < strArray.length; i++) {
+      if (strArray[i] == "-"){
+        strArray[i]="_";
+      }
+    }
+    document.getElementById('result').innerHTML = strArray;
+  }
+</script>
+</body>
+</html>
